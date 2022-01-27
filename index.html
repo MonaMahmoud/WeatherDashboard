@@ -6,8 +6,8 @@
     <title>Weather Dashboard</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='Assets/CSS/main.css'>
+    
 </head>
 <body>
 
@@ -20,9 +20,16 @@
 
     <div class="text-center">
 
-        <input class="w-25"><br><br><br><br>
-        <button type="button" class="btn btn-primary">Search</button>
+        <input id="cityInput" class="w-25"><br><br><br><br>
+        <button type="button" class="btn btn-primary" id="searchBtn">Search</button>
     </div>
-    
+
+    <div id="results">
+        <p id="temp"></p>
+        <p id="humidity"></p>
+        <p id="wind"></p>
+        <p id="uv"></p>
+    </div>
+    <script src='Assets/JS/main.js'></script>
 </body>
 </html>
