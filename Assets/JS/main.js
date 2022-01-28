@@ -5,7 +5,7 @@ var cityWeather;
 function getCityWeatherFromName(name){
     // cityName = name;
     //construct request URL to get city coordinates from name
-    var requestCityCoordinates = "http://api.openweathermap.org/data/2.5/weather?q="+name+"&appid=022816ce4f8542d4f9f3d06e40efbb54";
+    var requestCityCoordinates = "https://api.openweathermap.org/data/2.5/weather?q="+name+"&appid=022816ce4f8542d4f9f3d06e40efbb54";
     //call the server API to get city coordinates from name
     fetch(requestCityCoordinates)
     .then(function (response) {
@@ -89,12 +89,12 @@ for (let i = 0; i < nodeList.length; i++) {
     // getElementById("UVI5").src = "./Assets/images/ultraviolet.jfif";
 
     
-    document.getElementById("icon").src = "http://openweathermap.org/img/wn/"+cityWeather.daily[0].weather[0].icon+".png";
-    document.getElementById("icon1").src = "http://openweathermap.org/img/wn/"+cityWeather.daily[1].weather[0].icon+".png";
-    document.getElementById("icon2").src = "http://openweathermap.org/img/wn/"+cityWeather.daily[2].weather[0].icon+".png";
-    document.getElementById("icon3").src = "http://openweathermap.org/img/wn/"+cityWeather.daily[3].weather[0].icon+".png";
-    document.getElementById("icon4").src = "http://openweathermap.org/img/wn/"+cityWeather.daily[4].weather[0].icon+".png";
-    document.getElementById("icon5").src = "http://openweathermap.org/img/wn/"+cityWeather.daily[5].weather[0].icon+".png";
+    document.getElementById("icon").src = "https://openweathermap.org/img/wn/"+cityWeather.daily[0].weather[0].icon+".png";
+    document.getElementById("icon1").src = "https://openweathermap.org/img/wn/"+cityWeather.daily[1].weather[0].icon+".png";
+    document.getElementById("icon2").src = "https://openweathermap.org/img/wn/"+cityWeather.daily[2].weather[0].icon+".png";
+    document.getElementById("icon3").src = "https://openweathermap.org/img/wn/"+cityWeather.daily[3].weather[0].icon+".png";
+    document.getElementById("icon4").src = "https://openweathermap.org/img/wn/"+cityWeather.daily[4].weather[0].icon+".png";
+    document.getElementById("icon5").src = "https://openweathermap.org/img/wn/"+cityWeather.daily[5].weather[0].icon+".png";
 
 }
 
