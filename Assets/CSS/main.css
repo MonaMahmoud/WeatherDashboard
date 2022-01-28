@@ -1,0 +1,54 @@
+body{
+    margin: 100px;
+    background-color: aquamarine;
+}
+
+button{
+    margin: 20px;
+}
+img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.weatherInfo{
+    padding: 20px;
+    border: 3px;
+    border-style: solid;
+    max-width: 300px;
+    border-radius: 20px;
+    background-color: bisque;
+    display: none;
+}
+#currentDay{
+    margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+.daysWrapper{
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 20px;
+padding: 20px;
+}
+
+.date{
+    font-style: italic;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.place{
+    color: aquamarine;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.wind, .temperature, .humidity{
+    color: blue;
+    font-family: cursive;
+    font-size: large;
+}
