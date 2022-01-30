@@ -47,10 +47,21 @@ padding: 20px;
     color: aquamarine;
     font-weight: bold;
     font-size: x-large;
+    text-align: center;
 }
 
-.wind, .temperature, .humidity{
+.wind, .temperature, .humidity, .uv{
     color: blue;
     font-family: cursive;
     font-size: large;
+}
+
+/* .valueTitle{
+    color: navy;
+    font-family: cursive;
+    font-size: large;
+} */
+
+.uv{
+    max-width: 100px;
 }

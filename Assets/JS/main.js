@@ -69,19 +69,45 @@ function displayWeather(){
 for (let i = 0; i < nodeList.length; i++) {
     nodeList[i].style.display = "block";
 }
-
+    var uvIndex;
     document.getElementById("city").textContent = cityData.name;
     document.getElementById("temp").textContent = "Temperature: "+cityWeather.current.temp;
     document.getElementById("wind").textContent = "Wind Speed: "+cityWeather.current.wind_speed;
     document.getElementById("humidity").textContent = "Humidity: "+cityWeather.current.humidity;
-    document.getElementById("uv").textContent = "UV Index: "+cityWeather.current.uvi;
+    document.getElementById("uv").textContent = "Uv Index: "+cityWeather.current.uvi;
+    uvIndex = parseFloat(cityWeather.current.uvi);
+    if(uvIndex>11)
+    document.getElementById("uv").style.backgroundColor = "violet";
+    else if(uvIndex>8)
+    document.getElementById("uv").style.backgroundColor = "red";
+    else if(uvIndex>6)
+    document.getElementById("uv").style.backgroundColor = "orange";
+    else if(uvIndex>3)
+    document.getElementById("uv").style.backgroundColor = "yellow";
+    else
+    document.getElementById("uv").style.backgroundColor = "green";
+
     document.getElementById("date").textContent = new Date(cityWeather.daily[0].dt*1000).toDateString();
 
     document.getElementById("city1").textContent = cityData.name;
     document.getElementById("temp1").textContent = "Temperature: "+cityWeather.daily[1].temp.day;
     document.getElementById("wind1").textContent = "Wind Speed: "+cityWeather.daily[1].wind_speed;
-    document.getElementById("humidity1").textContent = "UV Index: "+cityWeather.daily[1].humidity;
+    document.getElementById("humidity1").textContent = "Humidity: "+cityWeather.daily[1].humidity;
     document.getElementById("uv1").textContent = "UV Index: "+cityWeather.daily[1].uvi;
+
+    uvIndex = parseFloat(cityWeather.daily[1].uvi);
+    if(uvIndex>11)
+    document.getElementById("uv1").style.backgroundColor = "violet";
+    else if(uvIndex>8)
+    document.getElementById("uv1").style.backgroundColor = "red";
+    else if(uvIndex>6)
+    document.getElementById("uv1").style.backgroundColor = "orange";
+    else if(uvIndex>3)
+    document.getElementById("uv1").style.backgroundColor = "yellow";
+    else
+    document.getElementById("uv1").style.backgroundColor = "green";
+
+
     document.getElementById("date1").textContent = new Date(cityWeather.daily[1].dt*1000).toDateString();
 
 
@@ -90,6 +116,20 @@ for (let i = 0; i < nodeList.length; i++) {
     document.getElementById("wind2").textContent = "Wind Speed: "+cityWeather.daily[2].wind_speed;
     document.getElementById("humidity2").textContent = "Humidity: "+cityWeather.daily[2].humidity;
     document.getElementById("uv2").textContent = "UV Index: "+cityWeather.daily[2].uvi;
+
+    uvIndex = parseFloat(cityWeather.daily[2].uvi);
+    if(uvIndex>11)
+    document.getElementById("uv2").style.backgroundColor = "violet";
+    else if(uvIndex>8)
+    document.getElementById("uv2").style.backgroundColor = "red";
+    else if(uvIndex>6)
+    document.getElementById("uv2").style.backgroundColor = "orange";
+    else if(uvIndex>3)
+    document.getElementById("uv2").style.backgroundColor = "yellow";
+    else
+    document.getElementById("uv2").style.backgroundColor = "green";
+
+
     document.getElementById("date2").textContent = new Date(cityWeather.daily[2].dt*1000).toDateString();
 
 
@@ -98,6 +138,20 @@ for (let i = 0; i < nodeList.length; i++) {
     document.getElementById("wind3").textContent = "Wind Speed: "+cityWeather.daily[3].wind_speed;
     document.getElementById("humidity3").textContent ="Humidity: "+ cityWeather.daily[3].humidity;
     document.getElementById("uv3").textContent = "UV Index: "+cityWeather.daily[3].uvi;
+
+    uvIndex = parseFloat(cityWeather.daily[3].uvi);
+    if(uvIndex>11)
+    document.getElementById("uv3").style.backgroundColor = "violet";
+    else if(uvIndex>8)
+    document.getElementById("uv3").style.backgroundColor = "red";
+    else if(uvIndex>6)
+    document.getElementById("uv3").style.backgroundColor = "orange";
+    else if(uvIndex>3)
+    document.getElementById("uv3").style.backgroundColor = "yellow";
+    else
+    document.getElementById("uv3").style.backgroundColor = "green";
+
+
     document.getElementById("date3").textContent = new Date(cityWeather.daily[3].dt*1000).toDateString();
 
     document.getElementById("city4").textContent = cityData.name;
@@ -105,6 +159,20 @@ for (let i = 0; i < nodeList.length; i++) {
     document.getElementById("wind4").textContent = cityWeather.daily[4].wind_speed;
     document.getElementById("humidity4").textContent ="Humidity: "+ cityWeather.daily[4].humidity;
     document.getElementById("uv4").textContent = "UV Index: "+cityWeather.daily[4].uvi;
+
+
+    uvIndex = parseFloat(cityWeather.daily[4].uvi);
+    if(uvIndex>11)
+    document.getElementById("uv4").style.backgroundColor = "violet";
+    else if(uvIndex>8)
+    document.getElementById("uv4").style.backgroundColor = "red";
+    else if(uvIndex>6)
+    document.getElementById("uv4").style.backgroundColor = "orange";
+    else if(uvIndex>3)
+    document.getElementById("uv4").style.backgroundColor = "yellow";
+    else
+    document.getElementById("uv4").style.backgroundColor = "green";
+
     document.getElementById("date4").textContent = new Date(cityWeather.daily[4].dt*1000).toDateString();
 
     document.getElementById("city5").textContent = cityData.name;
@@ -112,6 +180,20 @@ for (let i = 0; i < nodeList.length; i++) {
     document.getElementById("wind5").textContent = "Wind Speed: "+cityWeather.daily[5].wind_speed;
     document.getElementById("humidity5").textContent ="Humidity: "+ cityWeather.daily[5].humidity;
     document.getElementById("uv5").textContent = "UV Index: "+cityWeather.daily[5].uvi;
+
+    uvIndex = parseFloat(cityWeather.daily[5].uvi);
+    if(uvIndex>11)
+    document.getElementById("uv5").style.backgroundColor = "violet";
+    else if(uvIndex>8)
+    document.getElementById("uv5").style.backgroundColor = "red";
+    else if(uvIndex>6)
+    document.getElementById("uv5").style.backgroundColor = "orange";
+    else if(uvIndex>3)
+    document.getElementById("uv5").style.backgroundColor = "yellow";
+    else
+    document.getElementById("uv5").style.backgroundColor = "green";
+
+
     document.getElementById("date5").textContent = new Date(cityWeather.daily[5].dt*1000).toDateString();
 
 
