@@ -9,7 +9,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='Assets/CSS/main.css'>
     
 </head>
-<body>
+<body onload="loadSearchHistory()">
 
     <div class="bg-info font-weight-bold text-center h1 text-light p-3">Weather Dashboard</div>
     <div class="text-center h2 p-5">Search for a city:</div>
@@ -22,6 +22,9 @@
 
         <input id="cityInput" class="w-25"><br>
         <button type="button" class="btn btn-primary" id="searchBtn">Search</button>
+        <div id="history">
+
+        </div>
     </div>
 
     

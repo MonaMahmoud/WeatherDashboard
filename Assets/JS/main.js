@@ -1,6 +1,36 @@
 var cityData;
 var cityWeather;
-// var cityName;
+//var storedCityName;
+
+var storedWeather = JSON.parse(localStorage.getItem("WeatherSearch"));
+var storedCities = JSON.parse(localStorage.getItem("CityNames"));
+
+function loadSearchHistory(){
+
+    if(storedWeather){
+        var i;
+        for(i=0;i<storedWeather.length;i++){
+            //console.log(storedWeather[i]);
+            var result = document.createElement("button");
+            result.setAttribute("data-order",i);
+
+            result.textContent = storedCities[i].name;
+            //should be city name//////
+            //result.textContent = storedWeather[i].current.temp;
+            result.classList.add("btn");
+            result.classList.add("btn-success");
+            document.getElementById("history").appendChild(result);
+            result.addEventListener("click",function(event){
+                console.log(event.target);
+                console.log(event.target.getAttribute("data-order"));
+                cityWeather = storedWeather[event.target.getAttribute("data-order")];
+                cityData = storedCities[event.target.getAttribute("data-order")];
+                displayWeather();
+            });
+        }
+    }
+
+}
 
 function getCityWeatherFromName(name){
     // cityName = name;
@@ -51,7 +81,7 @@ for (let i = 0; i < nodeList.length; i++) {
     document.getElementById("temp1").textContent = "Temperature: "+cityWeather.daily[1].temp.day;
     document.getElementById("wind1").textContent = "Wind Speed: "+cityWeather.daily[1].wind_speed;
     document.getElementById("humidity1").textContent = "UV Index: "+cityWeather.daily[1].humidity;
-    document.getElementById("uv1").textContent = cityWeather.daily[1].uvi;
+    document.getElementById("uv1").textContent = "UV Index: "+cityWeather.daily[1].uvi;
     document.getElementById("date1").textContent = new Date(cityWeather.daily[1].dt*1000).toDateString();
 
 
@@ -95,6 +125,23 @@ for (let i = 0; i < nodeList.length; i++) {
     document.getElementById("icon3").src = "https://openweathermap.org/img/wn/"+cityWeather.daily[3].weather[0].icon+".png";
     document.getElementById("icon4").src = "https://openweathermap.org/img/wn/"+cityWeather.daily[4].weather[0].icon+".png";
     document.getElementById("icon5").src = "https://openweathermap.org/img/wn/"+cityWeather.daily[5].weather[0].icon+".png";
+
+    // var storedWeather;
+    // localStorage.getItem("WeatherSearch",storedWeather);
+
+    
+
+    if(!storedWeather){
+        //console.log("new array");
+        //console.log(storedWeather);
+        storedWeather = new Array();
+        storedCities = new Array();
+    }
+    storedWeather.push(cityWeather);
+    storedCities.push(cityData);
+    //store values into local storage
+    localStorage.setItem("WeatherSearch",JSON.stringify(storedWeather));
+    localStorage.setItem("CityNames",JSON.stringify(storedCities));
 
 }
 
