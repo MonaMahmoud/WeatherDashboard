@@ -81,9 +81,9 @@ for (let i = 0; i < nodeList.length; i++) {
 //display data from current and 5 days forecast into corresponding div
     var uvIndex;
     document.getElementById("city").textContent = cityData.name;
-    document.getElementById("temp").textContent = "Temperature: "+cityWeather.current.temp;
-    document.getElementById("wind").textContent = "Wind Speed: "+cityWeather.current.wind_speed;
-    document.getElementById("humidity").textContent = "Humidity: "+cityWeather.current.humidity;
+    document.getElementById("temp").innerHTML = "Temperature: "+cityWeather.current.temp+ " &deg;c";
+    document.getElementById("wind").textContent = "Wind Speed: "+cityWeather.current.wind_speed+" KPH";
+    document.getElementById("humidity").textContent = "Humidity: "+cityWeather.current.humidity+"%";
     document.getElementById("uv").textContent = "Uv Index: "+cityWeather.current.uvi;
     uvIndex = parseFloat(cityWeather.current.uvi);
 
@@ -102,9 +102,9 @@ for (let i = 0; i < nodeList.length; i++) {
     document.getElementById("date").textContent = new Date(cityWeather.daily[0].dt*1000).toDateString();
 
     document.getElementById("city1").textContent = cityData.name;
-    document.getElementById("temp1").textContent = "Temperature: "+cityWeather.daily[1].temp.day;
-    document.getElementById("wind1").textContent = "Wind Speed: "+cityWeather.daily[1].wind_speed;
-    document.getElementById("humidity1").textContent = "Humidity: "+cityWeather.daily[1].humidity;
+    document.getElementById("temp1").innerHTML = "Temperature: "+cityWeather.daily[1].temp.day+ " &deg;c";
+    document.getElementById("wind1").textContent = "Wind Speed: "+cityWeather.daily[1].wind_speed+" KPH";
+    document.getElementById("humidity1").textContent = "Humidity: "+cityWeather.daily[1].humidity+"%";
     document.getElementById("uv1").textContent = "UV Index: "+cityWeather.daily[1].uvi;
 
     uvIndex = parseFloat(cityWeather.daily[1].uvi);
@@ -125,9 +125,9 @@ for (let i = 0; i < nodeList.length; i++) {
 
 
     document.getElementById("city2").textContent = cityData.name;
-    document.getElementById("temp2").textContent = "Temperature: "+cityWeather.daily[2].temp.day;
-    document.getElementById("wind2").textContent = "Wind Speed: "+cityWeather.daily[2].wind_speed;
-    document.getElementById("humidity2").textContent = "Humidity: "+cityWeather.daily[2].humidity;
+    document.getElementById("temp2").innerHTML = "Temperature: "+cityWeather.daily[2].temp.day+ " &deg;c";
+    document.getElementById("wind2").textContent = "Wind Speed: "+cityWeather.daily[2].wind_speed+" KPH";
+    document.getElementById("humidity2").textContent = "Humidity: "+cityWeather.daily[2].humidity+"%";
     document.getElementById("uv2").textContent = "UV Index: "+cityWeather.daily[2].uvi;
 
     uvIndex = parseFloat(cityWeather.daily[2].uvi);
@@ -148,9 +148,9 @@ for (let i = 0; i < nodeList.length; i++) {
 
 
     document.getElementById("city3").textContent = cityData.name;
-    document.getElementById("temp3").textContent = "Temperature: "+cityWeather.daily[3].temp.day;
-    document.getElementById("wind3").textContent = "Wind Speed: "+cityWeather.daily[3].wind_speed;
-    document.getElementById("humidity3").textContent ="Humidity: "+ cityWeather.daily[3].humidity;
+    document.getElementById("temp3").innerHTML = "Temperature: "+cityWeather.daily[3].temp.day+ " &deg;c";
+    document.getElementById("wind3").textContent = "Wind Speed: "+cityWeather.daily[3].wind_speed+" KPH";
+    document.getElementById("humidity3").textContent ="Humidity: "+ cityWeather.daily[3].humidity+"%";
     document.getElementById("uv3").textContent = "UV Index: "+cityWeather.daily[3].uvi;
 
     uvIndex = parseFloat(cityWeather.daily[3].uvi);
@@ -170,9 +170,9 @@ for (let i = 0; i < nodeList.length; i++) {
     document.getElementById("date3").textContent = new Date(cityWeather.daily[3].dt*1000).toDateString();
 
     document.getElementById("city4").textContent = cityData.name;
-    document.getElementById("temp4").textContent = "Temperature: "+cityWeather.daily[4].temp.day;
-    document.getElementById("wind4").textContent = cityWeather.daily[4].wind_speed;
-    document.getElementById("humidity4").textContent ="Humidity: "+ cityWeather.daily[4].humidity;
+    document.getElementById("temp4").innerHTML = "Temperature: "+cityWeather.daily[4].temp.day+ " &deg;c";
+    document.getElementById("wind4").textContent = "Wind Speed: "+cityWeather.daily[4].wind_speed+" KPH";
+    document.getElementById("humidity4").textContent ="Humidity: "+ cityWeather.daily[4].humidity+"%";
     document.getElementById("uv4").textContent = "UV Index: "+cityWeather.daily[4].uvi;
 
 
@@ -192,9 +192,9 @@ for (let i = 0; i < nodeList.length; i++) {
     document.getElementById("date4").textContent = new Date(cityWeather.daily[4].dt*1000).toDateString();
 
     document.getElementById("city5").textContent = cityData.name;
-    document.getElementById("temp5").textContent = "Temperature: "+cityWeather.daily[5].temp.day;
-    document.getElementById("wind5").textContent = "Wind Speed: "+cityWeather.daily[5].wind_speed;
-    document.getElementById("humidity5").textContent ="Humidity: "+ cityWeather.daily[5].humidity;
+    document.getElementById("temp5").innerHTML = "Temperature: "+cityWeather.daily[5].temp.day+ " &deg;c";
+    document.getElementById("wind5").textContent = "Wind Speed: "+cityWeather.daily[5].wind_speed+" KPH";
+    document.getElementById("humidity5").textContent ="Humidity: "+ cityWeather.daily[5].humidity+"%";
     document.getElementById("uv5").textContent = "UV Index: "+cityWeather.daily[5].uvi;
 
     uvIndex = parseFloat(cityWeather.daily[5].uvi);
